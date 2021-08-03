@@ -4,12 +4,13 @@ from flask import Flask, send_from_directory
 server = Flask(__name__)
 
 
+@server.get("/")
 @server.get("/<string:file>")
 def startpage(file = None):
     if not file:
-        return send_from_directory("/", "startpage.html")
+        return send_from_directory("./", "startpage.html")
     else:
-        return send_from_directory("/", file)
+        return send_from_directory("./", file)
 
 
 @server.get("/ac/<string:query>")
