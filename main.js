@@ -44,7 +44,7 @@ $(() => {
     $("#greeting").text(`Good ${new Date().getHours() < 12 ? "morning" : new Date().getHours() < 18 ? "afternoon" : "evening"}, ${conf.username}.`);
 
     // Weather Detection
-    /* if (navigator.geolocation) {
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((pos) => {
             $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&units=${conf.weather.unit}&appid=${conf.weather.apikey}`, (res) => {
                 let ress = res.current;
@@ -75,7 +75,7 @@ $(() => {
                 }
             });
         });
-    } */
+    }
 
     // Search
     $("#search").on("keyup", (event) => {
@@ -89,7 +89,7 @@ $(() => {
             }
         } else if (event.key === " " && event.ctrlKey) {
             if ($("#search").val().length === 0 || !$("#search").val().trim()) { } else {
-                $.get(`http://localhost:8080/${$("#search").val()}`, (res) => {
+                $.get(`/ac/${$("#search").val()}`, (res) => {
                     $(".search-predictions > ul").remove();
                     res = res.data.slice(0, 10);
                     var predictions = "<ul>";
