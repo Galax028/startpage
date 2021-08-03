@@ -8,9 +8,9 @@ app = Flask(__name__)
 @app.get("/<string:file>")
 def startpage(file = None):
     if not file:
-        return send_from_directory("./", "startpage.html")
+        return send_from_directory("../", "startpage.html")
     else:
-        return send_from_directory("./", file)
+        return send_from_directory("../", file)
 
 
 @app.get("/ac/<string:query>")
