@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" type="image/x-icon">
+    <title>New Tab</title>
+</head>
+
+<body>
+    <div class="root">
+        <div class="rain front-row"></div>
+        <div class="rain back-row"></div>
+        <div class="sidebar"></div>
+        <div class="header">
+            <img id="browser-logo" />
+            <h1 id="browser-name"></h1>
+        </div>
+        <div class="subtitle">
+            <h5 id="clock">--:--:--</h5>
+            <h5>•</h5>
+            <h5 id="weather">--°C - loading weather...</h5>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search with DuckDuckGo" autocomplete="off" autofocus />
+            <div class="search-predictions"></div>
+        </div>
+        <div class="subtitle">
+            <h5 id="greeting">Hello, user.</h5>
+        </div>
+        <div class="cards-container"></div>
+        <span class="material-icons-outlined settings">settings</span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/2.11.0/bundled.js" referrerpolicy="no-referrer"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
