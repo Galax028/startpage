@@ -4,16 +4,16 @@ from flask import Flask, send_from_directory
 app = Flask(__name__)
 
 
-@app.get("/")
-@app.get("/<string:file>")
+@app.route("/")
+@app.route("/<string:file>")
 def startpage(file = None):
     if not file:
-        return send_from_directory("../", "startpage.html")
+        return send_from_directory("../", "index.html")
     else:
         return send_from_directory("../", file)
 
 
-@app.get("/ac/<string:query>")
+@app.route("/ac/<string:query>")
 def deal_with_cors(query):
     return {"data": requests.get(f"https://ac.duckduckgo.com/ac/?q={query}&type=list").json()[1]}
 
