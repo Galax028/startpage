@@ -1,0 +1,32 @@
+div.card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background-color: var(--color-pri);
+    box-shadow: var(--shadow);
+
+    & > h3.title {
+        background-color: var(--color-bg);
+        text-align: center;
+        border-radius: 0.2rem;
+        padding: 0.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    & > ul {
+        & > a {
+            text-decoration: none;
+        }
+
+        & > a > li {
+            font-size: 0.8em;
+            list-style-type: none;
+            transition: 0.3s;
+        }
+
+        & > a:hover > li {
+            font-weight: 700;
+            color: var(--color-sec-alt);
+        }
+    }
+}

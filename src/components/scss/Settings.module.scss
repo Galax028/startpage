@@ -1,0 +1,51 @@
+.settings {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.settingsModal {
+    position: absolute;
+    inset: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-bg);
+    outline: none;
+    display: flex;
+    flex-direction: column;
+
+    & > div.header {
+        display: flex;
+        width: 100%;
+
+        & h3.title {
+            flex-grow: 2;
+        }
+
+        & > .closeButton {
+            cursor: pointer;
+        }
+    }
+
+    & > div.saveButton {
+        align-self: flex-end;
+        background-color: var(--color-pri);
+        border-radius: 0.2rem;
+        margin-top: 0.5rem;
+        padding: 0.4rem;
+        cursor: pointer;
+
+        & > box-icon {
+            display: inline-block;
+            padding-top: 0.2rem;
+        }
+    }
+}

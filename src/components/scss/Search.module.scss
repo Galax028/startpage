@@ -1,0 +1,60 @@
+.container {
+    position: relative;
+    margin: 0.5rem;
+}
+
+.input {
+    padding: 1rem;
+    width: 50vw;
+    background-color: var(--color-pri);
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: var(--shadow);
+    user-select: auto;
+}
+
+.inputFocused {
+    outline: none;
+}
+
+.inputOpen {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.suggestionsContainer {
+    display: none;
+}
+
+.suggestionsContainerOpen {
+    display: block;
+    position: absolute;
+    width: 50vw;
+    max-height: 10rem;
+    overflow-y: scroll;
+    background-color: var(--color-pri);
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    z-index: 2;
+    box-shadow: var(--shadow);
+}
+
+.suggestionsList {
+    list-style-type: none;
+    font-size: 0.8rem;
+}
+
+.suggestion {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.suggestionHighlighted {
+    background-color: darken(hsl(195, 6%, 12%), 2%);
+
+    & > span {
+        color: var(--color-sec);
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,21 @@
+div.header {
+    display: flex;
+    align-items: center;
+    background: var(--color-pri);
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: var(--shadow);
+
+    & > img {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(237deg) brightness(58%) contrast(100%);
+        height: 4rem;
+        width: 4rem;
+        margin-right: 0.5rem;
+        cursor: pointer;
+    }
+
+    & > h1 {
+        font-size: 3rem;
+    }
+}

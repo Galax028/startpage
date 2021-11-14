@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fira Code", monospace;
+    color: var(--color-text);
+    user-select: none;
+}
+
+:root {
+    --color-bg: hsl(0, 0%, 16%);
+    --color-pri: hsl(195, 6%, 12%);
+    --color-sec: hsl(27, 99%, 55%);
+    --color-text: hsl(0, 0%, 58%);
+    --color-text-alt: hsl(0, 0%, 100%);
+    --shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+html {
+    font-size: 1.25vw;
+    background: var(--color-bg);
+    overflow-x: hidden;
+}
+
+div#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+hr {
+    margin: 0.5rem 0;
+}
+
+input, textarea {
+    background-color: var(--color-pri);
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    resize: none;
+    user-select: auto;
+}
+
+textarea {
+    height: 100%;
+}
