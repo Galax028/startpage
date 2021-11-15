@@ -52,7 +52,7 @@ class Search extends Component {
         // @ts-ignore
         const { value, suggestions } = this.state;
         const inputProps = {
-            placeholder: "Search DuckDuckGo",
+            placeholder: "Search The Web",
             value,
             onChange: this.onChange,
         };
