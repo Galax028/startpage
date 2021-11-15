@@ -17,12 +17,7 @@ class Search extends Component {
     };
 
     onSuggestionsFetchRequested = ({ value }) => {
-        fetch(
-            `https://thingproxy.freeboard.io/fetch/https://suggestqueries.google.com/complete/search?client=chrome&q=${value.replace(
-                " ",
-                "_"
-            )}`
-        )
+        fetch(`/api/${value.replace(" ", "_")}`)
             .then((res) => res.json())
             .then((data) => {
                 const newSuggestions: string[] = data[1];
