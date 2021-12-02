@@ -52,9 +52,10 @@ class Search extends Component {
         // @ts-ignore
         const { value, suggestions } = this.state;
         const inputProps = {
+            autoFocus: true,
+            onChange: this.onChange,
             placeholder: "Search The Web",
             value,
-            onChange: this.onChange,
         };
 
         return (
